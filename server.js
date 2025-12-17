@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // Middleware
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Database
 const db = new sqlite3.Database('./database/tasks.db', (err) => {
